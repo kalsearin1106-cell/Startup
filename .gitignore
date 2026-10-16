@@ -1,0 +1,15 @@
+# Do not track company source material or generated reports in the reusable skill repo.
+sources/
+visuals/
+output/
+report.md
+*.pdf
+*.xlsx
+*.xls
+*.csv
+*.png
+*.jpg
+*.jpeg
+*.docx
+*.pptx
+
