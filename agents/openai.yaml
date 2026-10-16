@@ -1,0 +1,4 @@
+interface:
+  display_name: "기업분석 보고서·PDF"
+  short_description: "자료 검토부터 한국어 기업분석 PDF까지"
+  default_prompt: "제공 자료와 허용된 공개 근거로 기업분석 보고서와 PDF를 작성해줘. 자료 목록과 초안에서 단계별로 검토할게."

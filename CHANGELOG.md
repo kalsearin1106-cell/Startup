@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.1.0
+
+- Translated the core skill instructions and evidence-review workflow into Korean.
+- Set Korean as the response and report language when the user requests in Korean, while preserving support for other requested languages.
+- Added guidance for preserving original currency units and tracing translated claims to their source.
+- Clarified the difference between staged review and direct-draft modes, including their shared internal QA and final PDF review.
+- Rewrote the README workflow and copyable intake prompt to explain the current process.
+
 ## 2.0.0
 
 - Added a compact intake form and copyable Korean request prompt.

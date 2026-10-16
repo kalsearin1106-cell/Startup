@@ -1,59 +1,69 @@
-# Evidence inventory and review workflow
+# 근거 인벤토리 및 검토 절차
 
-## Stage 1: inventory and extraction
+## 1단계: 자료 목록과 사실 추출
 
-Create a stable source ID for every supplied item (`S01`, `S02`, ...). Keep original filenames and user-provided URLs intact. For a web page, record its title or publisher and the URL actually reviewed. For a screenshot or scan, record the filename and the visible page/table/section when identifiable.
+사용자가 제공했거나 공개 자료 조사가 허용되어 확인한 항목마다 안정적인 출처 ID(`S01`, `S02` …)를 부여합니다. 원본 파일명과 사용자가 제공한 URL을 그대로 보존합니다. 웹페이지는 실제 확인한 URL, 페이지 제목 또는 게시자, 확인일을 기록합니다. 스크린샷이나 스캔은 파일명과 식별 가능한 페이지·표·섹션을 기록합니다.
 
-For every candidate claim or value, capture:
+후보 주장과 수치마다 다음 항목을 사실대장에 기록합니다.
 
-| Field | What to record |
+| 항목 | 기록할 내용 |
 |---|---|
-| Fact ID | Stable ID such as `F001` |
-| Proposed claim/value | Plain statement, with exact amount and unit where applicable |
-| Evidence class | Documented fact, company statement, third-party data, or analyst interpretation |
-| Source ID and locator | Source ID plus URL, page, heading, table, or image region |
-| Period and basis | Reporting period, currency/unit, and accounting basis if shown |
-| Limits/conflicts | Missing date, unclear OCR, conflicting source, or scope caveat |
-| Status | Readable, needs confirmation, conflicting, or excluded |
+| 사실 ID | `F001`과 같은 고유 ID |
+| 주장·수치 | 단위가 포함된 정확한 금액·값을 포함한 평이한 문장 |
+| 근거 유형 | 문서에 직접 기재된 사실, 회사의 주장, 제3자 자료, 분석자 해석 |
+| 출처 ID와 위치 | 출처 ID 및 URL, 페이지, 제목, 표, 이미지 영역 등 구체적 위치 |
+| 기간과 기준 | 보고 기간, 통화·단위, 자료에 표시된 회계 기준 |
+| 한계·상충 | 기준일 누락, 판독 불가, 상충 값, 범위상 주의점 |
+| 상태 | 판독 완료, 확인 필요, 상충, 제외 |
 
-Before drafting, present the user with:
+제공 자료와 허용된 공개 자료를 구분해 목록화합니다. 공개 자료는 실제로 확인한 페이지에 한해 출처로 등록합니다. 검색 결과 요약만 확인한 항목은 확인된 근거로 취급하지 않습니다. 한국어로 번역한 주장도 원문 표현과 출처 위치를 추적할 수 있도록 기록합니다. 단위 환산이나 계산을 했다면 원자료, 환산 기준·환율 또는 계산식을 함께 보존합니다.
 
-- The source inventory and what each item appears to contain.
-- The key extracted facts, including their source IDs and locators.
-- Any ambiguous readings, conflicting values, inaccessible pages, and facts needed for the requested report but not supplied.
-- Specific requests for additional material where needed. Do not fill gaps with assumptions. Search public sources only when the user authorized public research; prioritize primary records and record every page actually checked. Do not use private, paid, or account-gated sources without explicit access permission.
+초안 작성 전에 사용자에게 다음 내용을 사용자의 언어로 제시합니다.
 
-If the user selected staged review, wait for corrections or confirmation before drafting; a missing response is not confirmation. If the user explicitly selected direct drafting, proceed after inventory and carry unresolved items into the report as limits or questions.
+- 출처 ID, 자료명·파일명 또는 URL, 게시자와 각 자료에서 확인할 수 있는 내용
+- 핵심 추출 사실과 각 사실의 출처 ID 및 위치
+- 모호한 판독, 상충 값, 접근할 수 없거나 읽을 수 없는 자료
+- 요청된 보고서 범위에 필요하지만 아직 확인되지 않은 사실과 누락 자료
+- 추가 자료가 필요할 경우 구체적으로 필요한 항목
 
-## Stage 2: report and PDF draft
+사용자가 단계별 검토를 선택했다면 수정·확인 답변이 올 때까지 기다립니다. 답이 없다는 것을 확인이나 승인으로 간주하지 않습니다. 사용자가 바로 초안을 명시적으로 선택했다면 검토 응답을 기다리지 않고 진행하되 미해결 항목을 기록해 보고서에 반영합니다. 조사 권한이 제공 자료만으로 제한된 경우 공백을 외부 검색이나 가정으로 채우지 않습니다.
 
-Keep source IDs next to claims during drafting so the source register can map each material number and assertion to evidence. In the reader-facing report, use links or concise source notes close to the related claim, plus a source list with title, publisher, URL/file, reviewed date, and data period when available.
+## 2단계: 보고서와 PDF 초안
 
-Clearly label the following at the point they appear in the report, not only in the source appendix:
+초안 작성 중에는 주장 옆에 출처 ID를 붙여 사실대장과 연결합니다. 독자용 보고서에는 중요한 주장 가까이에 링크나 간결한 출처 표시를 넣고, 출처 목록에 자료명·게시자·파일명 또는 실제 확인한 URL·확인일·자료 기간을 기록합니다.
 
-- Company descriptions and performance claims as company statements.
-- Data supplied by third-party information services as third-party data, including provider and period.
-- Interpretations as analysis, with the supporting facts visible nearby.
-- Missing explanations as verification questions, such as “Was the 2025 revenue decline caused by contract timing or service mix? What project-level sales data would confirm this?” Do not present a possible cause as an established explanation.
-- Company announcements and plans separately from outcomes independently confirmed in filings, public registries, regulator records, trial registries, or patent records. A company announcement remains a company statement even when carried by a newswire.
+다음 내용을 주장 위치에서 바로 알아볼 수 있도록 구분합니다.
 
-For an investment or strategic conclusion framed as conditional observation, map the conditions to evidence that could change the view. State what evidence would strengthen, weaken, or leave the view unresolved, and why. Do not invent thresholds, probabilities, or forecasts. Where valuation, fully diluted ownership/dilution, recent cash flows, financing needs, or development budgets are unavailable, limit any conclusion about attractiveness or runway and identify which data would make it assessable.
+- 회사 소개, 계획, 성과에 관한 회사 발표는 회사의 주장으로 표시합니다.
+- 제3자 정보 서비스가 제공한 데이터는 제3자 자료로 표시하고 제공자와 기간을 기록합니다.
+- 독립적인 분석 의견은 해석으로 표시하고 이를 뒷받침하는 사실을 가까이 제시합니다.
+- 확인되지 않은 설명은 사실처럼 단정하지 않고 검증 질문으로 표현합니다. 예: “2025년 매출 감소가 계약 시점이나 서비스 구성 변화 때문인가? 이를 확인할 프로젝트별 매출 자료가 있는가?”
+- 회사 발표·계획과 공시, 공공 등록, 규제기관, 임상 등록부, 특허 기록에서 독립적으로 확인된 결과를 구분합니다. 뉴스와이어가 전달한 회사 발표도 회사의 주장입니다.
 
-For cash flow, separate operating, investing, and financing flows. Do not interpret financing-driven cash increases as operating cash generation. Use audited cashflow statements when present in the reviewed filing; label the period and basis, and do not project future runway from a single annual period without an appropriate forecast/budget basis.
+‘조건부 관찰’ 등 투자·전략 결론을 제시한다면 판단을 강화·약화하거나 미해결로 남길 자료와 그 이유를 연결합니다. 기준치, 확률, 전망을 임의로 만들지 않습니다. 밸류에이션, 완전희석 기준 보유 지분·희석, 최근 현금흐름, 자금조달 필요액, 개발 예산이 없으면 투자 매력도나 런웨이 결론의 범위를 제한하고 평가에 필요한 자료를 적습니다.
 
-For each chart, keep a table of the plotted values and source IDs. Include title, axes, period, units, source basis, and caveats. If the data has too few points for a trend, use a comparison chart or a table; do not imply a forecast.
+현금흐름은 영업·투자·재무 활동을 나눠 제시합니다. 재무 활동으로 늘어난 현금을 영업 현금 창출로 해석하지 않습니다. 검토한 공시에 감사된 현금흐름표가 있으면 해당 기간과 기준을 표시해 사용합니다. 적절한 전망·예산 근거 없이 한 해의 수치만으로 미래 런웨이를 예측하지 않습니다.
 
-Before the second checkpoint, complete internal editorial and evidence QA: reconcile every claim to its locator; recalculate subtotals and derived figures; compare repeated values across prose, tables, charts, and ledgers; edit typos, duplication, unnecessary caveats, and workflow meta text; inspect source-note legibility, page breaks, clipping, and sparse orphan pages.
+차트마다 그린 값과 출처 ID를 표로 보관합니다. 차트에는 제목, 축, 기간, 단위, 자료 기준과 주의사항을 표시합니다. 추세를 제시하기에 관측값이 부족하면 비교 차트나 표를 사용하고 예측을 암시하지 않습니다.
 
-At the second checkpoint, show the editable report and a rendered PDF preview. Confirm that edits are reflected in the latest PDF, references are readable, calculations can be reproduced from the ledger, and every material number is consistent across prose, tables, and charts. Record requested corrections before producing the reviewed final. Ask the user for substantive judgments, not for checks that can be performed from available evidence.
+두 번째 사용자 검토 전에 다음 내부 검수를 마칩니다.
 
-## Suggested project files
+- 중요한 주장과 출처 위치를 하나씩 대조합니다.
+- 소계와 파생 수치를 다시 계산합니다.
+- 본문·표·차트·대장에 반복된 값이 모두 일치하는지 확인합니다.
+- 오타, 중복 설명, 불필요한 단서와 작업 과정 문구를 정리합니다.
+- 출처 표기의 가독성, 페이지 나눔, 잘림, 지나치게 빈 마지막 페이지를 점검합니다.
 
-Adapt these to the user's destination folder; do not create empty placeholders:
+두 번째 검토 때 편집 가능한 보고서와 렌더링한 PDF 미리보기를 함께 제시합니다. 최신 PDF에 요청된 수정이 반영됐는지, 출처를 읽을 수 있는지, 사실대장으로 계산을 재현할 수 있는지, 본문·표·차트의 주요 수치가 일치하는지 확인합니다. 사용자의 판단이 필요한 실질적 수정 사항만 요청하고, 수정한 뒤 검토된 최종 산출물을 저장합니다.
 
-- `report.md` — editable report source.
-- `sources/source-register.csv` — source inventory and fact-to-source mapping.
-- `visuals/` — charts included in the report, plus their verified input data if not already in the source register.
-- `output/pdf/` — reviewed PDF deliverable.
+## 권장 프로젝트 파일
 
-Keep private source documents in the user-selected project area. The skill's own repository contains instructions and generic templates only, never company-specific source material or report outputs.
+사용자가 선택한 경로와 기존 폴더 구조를 우선합니다. 필요하지 않은 빈 파일이나 폴더를 만들지 않습니다.
+
+- `report.md` — 편집 가능한 보고서 원고
+- `sources/source-register.csv` — 자료 목록과 출처 정보
+- `sources/fact-ledger.csv` — 주장·수치와 근거 위치를 연결한 사실대장
+- `visuals/` — 차트와 검증된 입력 데이터
+- `output/pdf/` — 검토된 PDF 결과물
+
+회사별 원본 자료와 보고서는 선택한 프로젝트 폴더에 보관합니다. 재사용 가능한 스킬 저장소에는 회사 원본 자료나 보고서 결과물을 넣지 않습니다.

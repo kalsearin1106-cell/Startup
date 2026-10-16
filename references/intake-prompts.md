@@ -1,6 +1,8 @@
-# Intake form and reusable request prompt
+# 입력 양식 및 재사용 요청문
 
-Use these Korean templates as the default for Korean-language requests. Translate them for the user's language. Present the form and prompt when the skill is first invoked unless the user has already provided the relevant details or asks to proceed directly. Fill known fields from the conversation; leave only genuinely unresolved fields for the user.
+한국어 요청에는 아래 한국어 양식과 요청문을 기본으로 사용합니다. 사용자가 다른 언어를 쓰면 해당 언어로 번역합니다. 사용자가 이미 관련 정보를 제공했거나 바로 진행해 달라고 한 경우를 제외하고, 스킬을 처음 호출할 때 양식과 복사 가능한 요청문을 제시합니다. 대화에서 확인한 항목은 채우고 실제로 미정인 항목만 남깁니다.
+
+검토 방식의 차이를 쉽게 설명합니다. **단계별 검토**는 자료 인벤토리와 사실대장을 제시한 뒤 사용자의 수정·확인을 기다립니다. **바로 초안**은 인벤토리와 근거 확인은 수행하되 첫 검토 응답을 기다리지 않고 초안을 씁니다. 두 방식 모두 내부 품질 검수와 최종 보고서·PDF 미리보기 검토를 거친 다음에 완료합니다.
 
 ## Short intake form
 
@@ -11,13 +13,14 @@ Use these Korean templates as the default for Korean-language requests. Translat
 기준일:
 중점 분석 항목: (예: 사업모델, 투자 이력, 재무, 시장·경쟁, 임상·규제, 지식재산)
 자료 조사 범위: 제공 자료만 / 공개 자료도 검색·검증
-분량·형식·언어:
+분량·형식:
+출력 언어:
 프로젝트 폴더:
-검토 방식: 자료 목록 확인 후 초안 / 바로 초안 / 기타
+검토 방식: 단계별 검토(자료 확인 후 초안) / 바로 초안(자료 확인 응답을 기다리지 않고 초안) / 기타
 첨부 파일·링크:
 ```
 
-If the user says “자료조사도 해줘” or equivalent, interpret that as permission to research relevant public sources for the requested analysis. Do not infer permission to use private, paid, or account-gated sources. Ask about access only if it is necessary and cannot be avoided.
+사용자가 “자료조사도 해줘” 또는 이에 준하는 말을 하면 요청한 분석에 필요한 공개 자료를 조사해도 된다는 뜻으로 해석합니다. 이를 비공개·유료·계정 제한 자료에 접근해도 된다는 뜻으로 확대하지 않습니다. 접근 여부를 물어야만 진행할 수 있는 경우에만 추가로 확인합니다.
 
 ## Copyable prompt
 
@@ -29,7 +32,8 @@ If the user says “자료조사도 해줘” or equivalent, interpret that as p
 - 기준일: [YYYY-MM-DD]
 - 중점 항목: [분석 항목]
 - 자료 조사 범위: [제공 자료만 / 공개 자료 검색·검증 허용]
-- 분량·형식·언어: [조건]
+- 분량·형식: [조건]
+- 출력 언어: [한국어 / 기타]
 - 프로젝트 폴더: [경로]
 - 검토 방식: [단계별 검토 / 바로 초안]
 
@@ -50,13 +54,18 @@ If the user says “자료조사도 해줘” or equivalent, interpret that as p
 - 확인을 받은 다음 Markdown 보고서와 PDF 초안을 만들어 내부 검수 후 다시 검토를 요청해줘.
 - 최종 확인 전에는 완료본으로 확정하지 마.
 
+바로 초안을 선택한 경우:
+- 자료 목록과 사실 확인은 먼저 수행하되, 첫 번째 검토 답변을 기다리지 않고 초안을 작성해줘.
+- 확인되지 않은 내용은 초안에 한계나 검증 질문으로 표시해줘.
+- 내부 검수 후 Markdown 보고서와 PDF 미리보기를 보여주고, 최종 확인 전에는 완료본으로 확정하지 마.
+
 기존 결과물을 덮어쓰지 말고, 새 버전을 만들 때 최신 검토본이 무엇인지 명확히 알려줘.
 ```
 
-## Applying the form without creating friction
+## 불필요한 질문을 줄이는 방법
 
-- Do not make the user fill every field when their message already answers it.
-- If the user has not specified an output path, use the current project/workspace or an explicitly named folder and state the choice; ask only if multiple plausible destinations exist.
-- If the user asks for fast execution and the missing item is a style preference, use a plain default and proceed.
-- If source-scope permission, report purpose, or a material conclusion depends on an unresolved choice, ask one concise question before dependent work.
-- Treat the supplied prompt as a reusable scaffold, not as permission to insert placeholder content. Resolve or omit every placeholder before drafting.
+- 사용자의 요청에 이미 답이 있는 항목을 다시 작성하도록 요구하지 않습니다.
+- 저장 경로가 지정되지 않으면 현재 프로젝트·작업공간 또는 사용자가 명시한 폴더를 쓰고 선택한 경로를 알립니다. 가능한 위치가 여러 곳이라 결과에 영향이 있을 때만 물어봅니다.
+- 빠른 진행을 요청했고 빠진 내용이 문체 같은 선택 사항이면 무난한 기본값을 사용합니다.
+- 자료 조사 권한, 보고서 목적, 중요한 결론이 미해결 선택에 달렸다면 그에 의존하는 작업 전에 간결한 질문을 하나 합니다.
+- 복사 가능한 요청문은 재사용용 틀입니다. 빈칸을 임의 내용으로 채우지 않습니다. 초안 작성 전에 각 빈칸을 확인하거나 해당 항목을 제외합니다.
