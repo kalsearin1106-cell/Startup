@@ -1,0 +1,5 @@
+interface:
+  display_name: "스타트업 기업분석 리포트"
+  short_description: "사용자 자료로 근거 기반 기업분석 PDF 작성"
+  default_prompt: "제공한 자료만 근거로 기업분석 보고서를 만들어줘. 자료 추출과 PDF 초안에서 각각 검토할게."
+
